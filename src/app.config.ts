@@ -5,6 +5,7 @@ export default defineAppConfig({
     "pages/purchased-courses/index",
     "pages/personal/index",
     "pages/search/index",
+    "pages/lesson-detail/index",
   ],
   window: {
     backgroundTextStyle: "light",
