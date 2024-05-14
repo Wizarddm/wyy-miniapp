@@ -4,6 +4,7 @@ export default defineAppConfig({
     "pages/limited-time-discount/index",
     "pages/purchased-courses/index",
     "pages/personal/index",
+    "pages/search/index",
   ],
   window: {
     backgroundTextStyle: "light",
