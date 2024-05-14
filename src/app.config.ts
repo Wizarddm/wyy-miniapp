@@ -3,6 +3,7 @@ export default defineAppConfig({
     "pages/index/index",
     "pages/limited-time-discount/index",
     "pages/purchased-courses/index",
+    "pages/personal/index",
   ],
   window: {
     backgroundTextStyle: "light",
