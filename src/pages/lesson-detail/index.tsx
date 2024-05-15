@@ -81,10 +81,7 @@ class LessonDetail extends Component<PropsWithChildren> {
             className={cssModule.img1}
             src="//img20.360buyimg.com/ling/jfs/t1/177923/18/44491/2373/66432097Fa8df2732/8858f98b1e408126.png"
           ></Image>
-          <Image
-            className={cssModule.img2}
-            src="//img11.360buyimg.com/ling/jfs/t1/125583/22/41237/5483/6643293dFad8800db/4e3d9eb00ff9cae3.png"
-          ></Image>
+
           <View className={cssModule.main_img_wrap}>
             <Image
               className={cssModule.main_img}
@@ -92,6 +89,10 @@ class LessonDetail extends Component<PropsWithChildren> {
             ></Image>
           </View>
           <View className={cssModule.cnt_col1}>
+            <Image
+              className={cssModule.img2}
+              src="//img11.360buyimg.com/ling/jfs/t1/125583/22/41237/5483/6643293dFad8800db/4e3d9eb00ff9cae3.png"
+            ></Image>
             <Text className={`${cssModule.line1} ${cssModule.txt1}`}>
               课程到手价
             </Text>
