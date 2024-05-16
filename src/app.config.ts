@@ -12,6 +12,9 @@ export default defineAppConfig({
     // "components/order-detail/index",
     "pages/course-classification/index",
     "pages/evaluate-detail/index",
+    "pages/order/index",
+    "pages/browsing-history/index",
+    "pages/message/index",
   ],
   window: {
     backgroundTextStyle: "light",
