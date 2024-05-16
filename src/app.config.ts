@@ -11,6 +11,7 @@ export default defineAppConfig({
     // "components/ensure/index",
     // "components/order-detail/index",
     "pages/course-classification/index",
+    "pages/evaluate-detail/index",
   ],
   window: {
     backgroundTextStyle: "light",
