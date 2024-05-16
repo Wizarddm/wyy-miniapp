@@ -8,7 +8,9 @@ export default defineAppConfig({
     "pages/lesson-detail/index",
     "pages/directory/index",
     "pages/teacher-course/index",
-    "components/ensure/index",
+    // "components/ensure/index",
+    // "components/order-detail/index",
+    "pages/course-classification/index",
   ],
   window: {
     backgroundTextStyle: "light",
