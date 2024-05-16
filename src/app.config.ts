@@ -8,6 +8,7 @@ export default defineAppConfig({
     "pages/lesson-detail/index",
     "pages/directory/index",
     "pages/teacher-course/index",
+    "components/ensure/index",
   ],
   window: {
     backgroundTextStyle: "light",
