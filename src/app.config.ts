@@ -19,6 +19,10 @@ export default defineAppConfig({
     "pages/address/index",
     "pages/address-create/index",
     "pages/address-no-empty/index",
+    "pages/coupon/index",
+    "pages/coupon-unuse/index",
+    "pages/coupon-used/index",
+    "pages/coupon-expired/index",
   ],
   window: {
     backgroundTextStyle: "light",
