@@ -1,5 +1,5 @@
 import { Component, PropsWithChildren } from "react";
-import { View, Text, Image } from "@tarojs/components";
+import { View, Image, Text } from "@tarojs/components";
 import { observer, inject } from "mobx-react";
 
 import cssModule from "./index.module.less";
@@ -15,13 +15,13 @@ type PageStateProps = {
   };
 };
 
-interface PurchasedCourses {
+interface CoursesPurchased {
   props: PageStateProps;
 }
 
 @inject("store")
 @observer
-class PurchasedCourses extends Component<PropsWithChildren> {
+class CoursesPurchased extends Component<PropsWithChildren> {
   componentDidMount() {}
 
   componentWillUnmount() {}
@@ -59,7 +59,7 @@ class PurchasedCourses extends Component<PropsWithChildren> {
             <Text className={cssModule.txt1}>HD</Text>
             <Image
               className={cssModule.icon}
-              src="//img14.360buyimg.com/ling/jfs/t1/242594/17/8582/745/663ae597F94410d3c/e39a1e7f76e20095.png"
+              src="//img20.360buyimg.com/ling/jfs/t1/201651/31/42951/745/66457662Fd13edc24/40db6f55f55dbc5c.png"
             ></Image>
             <Image
               className={cssModule.icon1}
@@ -68,12 +68,12 @@ class PurchasedCourses extends Component<PropsWithChildren> {
           </View>
           <Image
             className={cssModule.icon2}
-            src="//img12.360buyimg.com/ling/jfs/t1/217590/37/40687/312/663ae597F52e20c29/c32f56176e731ac9.png"
+            src="//img11.360buyimg.com/ling/jfs/t1/204154/17/42353/312/66457662Fa58c9936/4631d89246091ef7.png"
           ></Image>
           <View className={cssModule.cnt_row1}>
             <Image
               className={cssModule.img}
-              src="//img10.360buyimg.com/ling/jfs/t1/234241/10/16196/2028/663aed54F023c8b50/b4c0274c9273ed76.png"
+              src="//img30.360buyimg.com/ling/jfs/t1/190312/37/45194/2028/66456d7fF74b334cf/5912f3b6e5e0c9da.png"
             ></Image>
             <Text className={`${cssModule.line1} ${cssModule.txt2}`}>
               已购课程
@@ -83,39 +83,80 @@ class PurchasedCourses extends Component<PropsWithChildren> {
             </View>
             <Image
               className={cssModule.img1}
-              src="//img20.360buyimg.com/ling/jfs/t1/199634/24/43019/2392/663aee53Fa4913747/7b47dd79a29111ce.png"
+              src="//img10.360buyimg.com/ling/jfs/t1/233416/23/17054/2396/6646fda5Fa72a7717/060a3cb8e974783d.png"
             ></Image>
           </View>
-          <Image
-            className={cssModule.main_img}
-            src="//img14.360buyimg.com/ling/jfs/t1/182139/26/45488/10026/66431cceF6e8aa249/f704371108833e6d.png"
-          ></Image>
-          <Text className={`${cssModule.line2} ${cssModule.tit}`}>
-            没有要学习的课程\n去首页挑选喜欢的课吧~
-          </Text>
-          <View className={cssModule.section_wrap}>
-            <Text className={`${cssModule.line1} ${cssModule.section}`}>
-              去看看
-            </Text>
+          {/*以下是一个列表*/}
+          <View className={cssModule.cnt_col_list}>
+            {/*列表项*/}
+            {[0, 1].map((item, index) => (
+              <View
+                className={`${cssModule.goods_item_common} ${cssModule.goods_item}`}
+                key={index}
+              >
+                <View
+                  className={`${cssModule.goods_common} ${cssModule.goods}`}
+                >
+                  <Image
+                    className={cssModule.goods_img_common}
+                    src="//img10.360buyimg.com/ling/jfs/t1/175493/28/46153/81330/6646c901F70af767e/85e877ef0f37e51e.png"
+                  ></Image>
+                  <View className={cssModule.cnt_col1_common}>
+                    <Text
+                      className={`${cssModule.line1} ${cssModule.tit_common}`}
+                    >
+                      女装下装六面原型结构详解
+                    </Text>
+                    <View className={cssModule.section_wrap_common}>
+                      <Text
+                        className={`${cssModule.section_common} ${cssModule.section}`}
+                      >
+                        永久有效
+                      </Text>
+                    </View>
+                    <View className={cssModule.cnt_row2_common}>
+                      <Text
+                        className={`${cssModule.line1} ${cssModule.section_common} ${cssModule.tit1}`}
+                      >
+                        直播课
+                      </Text>
+                      {/*商品价格*/}
+                      <View className={cssModule.price_wrap_common}>
+                        <Text className={cssModule.yuan_common}>¥</Text>
+                        <Text className={cssModule.price_common}>49.90</Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+                <View className={cssModule.cnt_row3_common}>
+                  <Text
+                    className={`${cssModule.line1} ${cssModule.section1_common}`}
+                  >
+                    订单号：ht2120028262024041224202561025
+                  </Text>
+                  <Text className={cssModule.section2_common}>复制</Text>
+                </View>
+              </View>
+            ))}
           </View>
-          <View className={cssModule.cnt_col1}>
-            <View className={cssModule.cnt_row2}>
+          <View className={cssModule.cnt_col2}>
+            <View className={cssModule.cnt_row4}>
               <View className={cssModule.color_view}></View>
               <Text className={`${cssModule.line1} ${cssModule.txt4}`}>
                 猜你喜欢
               </Text>
-              <View className={cssModule.cnt_row3}>
+              <View className={cssModule.cnt_row5}>
                 <Image
                   className={cssModule.icon3}
-                  src="//img11.360buyimg.com/ling/jfs/t1/158171/23/45344/844/663ae594F105341da/c431d827d8d2bcec.png"
+                  src="//img30.360buyimg.com/ling/jfs/t1/156847/20/45001/844/6646fda2F96334f7b/02c0a9f23aeb1601.png"
                 ></Image>
-                <Text className={`${cssModule.line1} ${cssModule.section1}`}>
+                <Text className={`${cssModule.line1} ${cssModule.section3}`}>
                   换一换
                 </Text>
               </View>
             </View>
             {/*以下是一个列表*/}
-            <View className={cssModule.cnt_col_list}>
+            <View className={cssModule.cnt_col_list1}>
               {/*列表项*/}
               {[0, 1].map((item, index) => (
                 <View
@@ -124,44 +165,40 @@ class PurchasedCourses extends Component<PropsWithChildren> {
                 >
                   <View className={cssModule.wrapper_common}>
                     <View className={cssModule.section_wrap1_common}>
-                      <Text
-                        className={`${cssModule.section2_common} ${cssModule.section2}`}
-                      >
-                        专栏
-                      </Text>
+                      <Text className={cssModule.section4_common}>专栏</Text>
                     </View>
                   </View>
-                  <View className={cssModule.cnt_col2_common}>
-                    <View className={cssModule.cnt_row4_common}>
+                  <View className={cssModule.cnt_col3_common}>
+                    <View className={cssModule.cnt_row6_common}>
                       <Image
-                        className={cssModule.img2_common}
-                        src="//img14.360buyimg.com/ling/jfs/t1/249736/16/8513/3679/663ae594F1ececf2e/ad7bbc201dce7296.png"
+                        className={cssModule.img2}
+                        src="//img14.360buyimg.com/ling/jfs/t1/223324/6/40520/3679/6646fda3Ff30acfa1/90d61cd5c7250c36.png"
                       ></Image>
-                      <View className={cssModule.cnt_row5_common}>
+                      <View className={cssModule.cnt_row7_common}>
                         <Text className={cssModule.txt5_common}>
                           女装下装六面
                         </Text>
-                        <Text className={cssModule.txt5_common}>原</Text>
                         <Text
                           className={`${cssModule.txt5_common} ${cssModule.txt6}`}
                         >
-                          型
+                          原
                         </Text>
+                        <Text className={cssModule.txt5_common}>型</Text>
                       </View>
                     </View>
-                    <View className={cssModule.cnt_row6_common}>
+                    <View className={cssModule.cnt_row8_common}>
                       <Text className={cssModule.txt5_common}>型</Text>
                       <Text className={cssModule.txt5_common}>结构详解</Text>
                     </View>
-                    <View className={cssModule.cnt_row7_common}>
+                    <View className={cssModule.cnt_row9_common}>
                       <Text
-                        className={`${cssModule.line1} ${cssModule.section2_common} ${cssModule.txt7}`}
+                        className={`${cssModule.line1} ${cssModule.section4_common} ${cssModule.txt7}`}
                       >
                         273人已学习
                       </Text>
                       <Image
                         className={cssModule.icon4}
-                        src="//img10.360buyimg.com/ling/jfs/t1/174491/15/45548/2453/663ae594F85c6338b/c351e2b85e7ccc46.png"
+                        src="//img12.360buyimg.com/ling/jfs/t1/247313/40/9255/2453/6646fda3F529e7662/825bca650ba65ffc.png"
                       ></Image>
                     </View>
                   </View>
@@ -171,7 +208,7 @@ class PurchasedCourses extends Component<PropsWithChildren> {
                   ></Image>
                   <Image
                     className={cssModule.icon6}
-                    src="//img10.360buyimg.com/ling/jfs/t1/133359/12/45568/5483/663ae595F778180f2/19c24e201f1ff904.png"
+                    src="//img20.360buyimg.com/ling/jfs/t1/237586/22/16674/5483/6646fda4Fcb1f6e84/f6e62237b1f9992f.png"
                   ></Image>
                   <Image
                     className={cssModule.icon7}
@@ -185,23 +222,23 @@ class PurchasedCourses extends Component<PropsWithChildren> {
               ))}
             </View>
           </View>
-          <View className={cssModule.cnt_col3}>
+          <View className={cssModule.cnt_col4}>
             <View className={cssModule.view}></View>
             <Image
               className={cssModule.img3}
-              src="//img20.360buyimg.com/ling/jfs/t1/247568/6/9049/1923/66431cceFcc9bdc2f/42c3c58cedadc884.png"
+              src="//img12.360buyimg.com/ling/jfs/t1/177298/15/45918/1927/6646fda4F01c3adae/f6f1c8eb8ccf28a5.png"
             ></Image>
-            <View className={cssModule.cnt_row8}>
+            <View className={cssModule.cnt_row10}>
               <Image
                 className={cssModule.img4}
-                src="//img14.360buyimg.com/ling/jfs/t1/215304/4/40184/1675/66431cceF2cbe362d/bc476f6abd1f0a09.png"
+                src="//img30.360buyimg.com/ling/jfs/t1/245011/35/8714/1694/6646fda4F374e3f21/ae79ee5202e5bc6d.png"
               ></Image>
               <Image
                 className={cssModule.img4}
-                src="//img30.360buyimg.com/ling/jfs/t1/175288/21/40525/2126/663ae599F348593af/ac6054954e4d3a09.png"
+                src="//img12.360buyimg.com/ling/jfs/t1/230656/8/18183/2126/6646fda5F3f36859a/68204e2178934e4b.png"
               ></Image>
             </View>
-            <View className={cssModule.cnt_row9}>
+            <View className={cssModule.cnt_row11}>
               <Text className={`${cssModule.line1} ${cssModule.txt9}`}>
                 首页
               </Text>
@@ -220,4 +257,4 @@ class PurchasedCourses extends Component<PropsWithChildren> {
   }
 }
 
-export default PurchasedCourses;
+export default CoursesPurchased;

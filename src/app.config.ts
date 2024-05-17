@@ -2,7 +2,7 @@ export default defineAppConfig({
   pages: [
     "pages/index/index",
     "pages/limited-time-discount/index",
-    "pages/purchased-courses/index",
+    "pages/courses-purchased/index",
     "pages/personal/index",
     "pages/search/index",
     "pages/lesson-detail/index",
@@ -23,6 +23,13 @@ export default defineAppConfig({
     "pages/coupon-unuse/index",
     "pages/coupon-used/index",
     "pages/coupon-expired/index",
+    "pages/seckill/index",
+    "pages/seckill-list/index",
+    "pages/seckill-course-detail/index",
+    "pages/chat/index",
+    "pages/order-payable/index",
+    "pages/order-payed/index",
+    "pages/order-detail/index",
   ],
   window: {
     backgroundTextStyle: "light",
