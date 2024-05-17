@@ -10,6 +10,7 @@ export default defineAppConfig({
     "pages/teacher-course/index",
     // "components/ensure/index",
     // "components/order-detail/index",
+    // "components/address-select/index",
     "pages/course-classification/index",
     "pages/evaluate-detail/index",
     "pages/order/index",
@@ -17,7 +18,7 @@ export default defineAppConfig({
     "pages/message/index",
     "pages/address/index",
     "pages/address-create/index",
-    "components/address-select/index",
+    "pages/address-no-empty/index",
   ],
   window: {
     backgroundTextStyle: "light",
