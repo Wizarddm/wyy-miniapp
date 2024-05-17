@@ -15,6 +15,9 @@ export default defineAppConfig({
     "pages/order/index",
     "pages/browsing-history/index",
     "pages/message/index",
+    "pages/address/index",
+    "pages/address-create/index",
+    "components/address-select/index",
   ],
   window: {
     backgroundTextStyle: "light",
