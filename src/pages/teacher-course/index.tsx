@@ -1,6 +1,7 @@
 import { Component, PropsWithChildren } from "react";
 import { View, Image, Text } from "@tarojs/components";
 import { observer, inject } from "mobx-react";
+import { post } from "utils/request";
 
 import cssModule from "./index.module.less";
 
@@ -22,7 +23,9 @@ interface TeacherCourse {
 @inject("store")
 @observer
 class TeacherCourse extends Component<PropsWithChildren> {
-  componentDidMount() {}
+  componentDidMount() {
+    post("/api/course.course/list");
+  }
 
   componentWillUnmount() {}
 
