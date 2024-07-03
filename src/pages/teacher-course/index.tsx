@@ -7,11 +7,9 @@ import cssModule from "./index.module.less";
 
 type PageStateProps = {
   store: {
-    counterStore: {
-      counter: number;
-      increment: Function;
-      decrement: Function;
-      incrementAsync: Function;
+    userStore: {
+      app_id: number;
+      token: string;
     };
   };
 };
@@ -24,7 +22,11 @@ interface TeacherCourse {
 @observer
 class TeacherCourse extends Component<PropsWithChildren> {
   componentDidMount() {
-    post("/api/course.course/list");
+    console.log(this.props);
+    post("/api/course.course/list", {
+      token: this.props.store.userStore.token,
+      app_id: this.props.store.userStore.app_id,
+    });
   }
 
   componentWillUnmount() {}

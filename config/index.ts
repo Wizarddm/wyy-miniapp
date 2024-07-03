@@ -23,7 +23,7 @@ const config = {
     enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
   alias: {
-    "@": path.resolve(__dirname, "..", "src"),
+    src: path.resolve(__dirname, "..", "src"),
     utils: path.resolve(__dirname, "..", "utils"),
     components: path.resolve(__dirname, "..", "src/components"),
   },

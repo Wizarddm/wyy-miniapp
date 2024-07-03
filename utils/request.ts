@@ -1,5 +1,6 @@
 import Taro from "@tarojs/taro";
 import axios from "axios";
+import userStore from "src/store/user";
 
 // 创建 axios 实例
 const instance = axios.create({
@@ -7,20 +8,23 @@ const instance = axios.create({
   timeout: 10000, // 请求超时时间
 });
 
+const u = userStore.token;
+console.log(u);
+
 // 请求拦截器
 instance.interceptors.request.use(
   (config) => {
     // 在发送请求之前做些什么
-    Taro.showLoading({ title: "加载中" });
+    // Taro.showLoading({ title: "加载中" });
     return config;
   },
   (error) => {
     // 对请求错误做些什么
-    Taro.hideLoading();
-    Taro.showToast({
-      title: "请求错误",
-      icon: "none",
-    });
+    // Taro.hideLoading();
+    // Taro.showToast({
+    //   title: "请求错误",
+    //   icon: "none",
+    // });
     return Promise.reject(error);
   }
 );
@@ -29,16 +33,16 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   (response) => {
     // 对响应数据做些什么
-    Taro.hideLoading();
+    // Taro.hideLoading();
     return response.data;
   },
   (error) => {
     // 对响应错误做些什么
-    Taro.hideLoading();
-    Taro.showToast({
-      title: error.response?.data?.message || "请求失败",
-      icon: "none",
-    });
+    // Taro.hideLoading();
+    // Taro.showToast({
+    //   title: error.response?.data?.message || "请求失败",
+    //   icon: "none",
+    // });
     return Promise.reject(error);
   }
 );

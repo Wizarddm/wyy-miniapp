@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "wyy-miniapp",
   "description": "wyy mini-app",
-  "appid": "touristappid",
+  "appid": "testAppId",
   "setting": {
     "urlCheck": true,
     "es6": false,
