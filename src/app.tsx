@@ -3,12 +3,14 @@ import { Provider } from "mobx-react";
 
 import counterStore from "./store/counter";
 import userStore from "./store/user";
+import courseStore from "./store/course";
 
 import "./app.less";
 
 const store = {
   counterStore,
   userStore,
+  courseStore,
 };
 
 class App extends Component<PropsWithChildren> {

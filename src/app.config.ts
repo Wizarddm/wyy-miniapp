@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  entryPagePath: "pages/teacher-course/index",
   pages: [
     "pages/index/index",
     "pages/limited-time-discount/index",
@@ -46,9 +47,8 @@ export default defineAppConfig({
         pagePath: "pages/index/index",
         text: "首页",
         // iconPath: "assets/images/tabbar/home.png",
-        iconPath:
-          "https://img14.360buyimg.com/ling/jfs/t1/131928/7/44836/1733/663ae598F86d3b427/1bc5deea2856dab7.png",
-        selectedIconPath: "assets/images/tabbar/home_selected.png",
+        iconPath: "assets/images/tabbar/home-selected.png",
+        selectedIconPath: "assets/images/tabbar/home-selected.png",
       },
       {
         pagePath: "pages/courses-purchased/index",
@@ -56,7 +56,8 @@ export default defineAppConfig({
         // iconPath: "assets/images/tabbar/category.png",
         iconPath:
           "https://img12.360buyimg.com/ling/jfs/t1/227750/14/17403/1649/663ae599F948e4aff/aa8155f1c4153fa4.png",
-        selectedIconPath: "assets/images/tabbar/category_selected.png",
+        selectedIconPath:
+          "https://img12.360buyimg.com/ling/jfs/t1/227750/14/17403/1649/663ae599F948e4aff/aa8155f1c4153fa4.png",
       },
       {
         pagePath: "pages/personal/index",
@@ -64,7 +65,8 @@ export default defineAppConfig({
         // iconPath: "assets/images/tabbar/category.png",
         iconPath:
           "https://img30.360buyimg.com/ling/jfs/t1/175288/21/40525/2126/663ae599F348593af/ac6054954e4d3a09.png",
-        selectedIconPath: "assets/images/tabbar/category_selected.png",
+        selectedIconPath:
+          "https://img30.360buyimg.com/ling/jfs/t1/175288/21/40525/2126/663ae599F348593af/ac6054954e4d3a09.png",
       },
     ],
   },

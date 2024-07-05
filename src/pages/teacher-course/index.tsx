@@ -1,7 +1,6 @@
 import { Component, PropsWithChildren } from "react";
 import { View, Image, Text } from "@tarojs/components";
 import { observer, inject } from "mobx-react";
-import { post } from "utils/request";
 
 import cssModule from "./index.module.less";
 
@@ -10,6 +9,9 @@ type PageStateProps = {
     userStore: {
       app_id: number;
       token: string;
+    };
+    courseStore: {
+      fetchList: Function;
     };
   };
 };
@@ -22,11 +24,10 @@ interface TeacherCourse {
 @observer
 class TeacherCourse extends Component<PropsWithChildren> {
   componentDidMount() {
+    const { courseStore } = this.props.store;
+
     console.log(this.props);
-    post("/api/course.course/list", {
-      token: this.props.store.userStore.token,
-      app_id: this.props.store.userStore.app_id,
-    });
+    courseStore.fetchList();
   }
 
   componentWillUnmount() {}
@@ -35,10 +36,7 @@ class TeacherCourse extends Component<PropsWithChildren> {
 
   componentDidHide() {}
 
-  increment = () => {
-    const { counterStore } = this.props.store;
-    counterStore.increment();
-  };
+  increment = () => {};
 
   decrement = () => {
     const { counterStore } = this.props.store;
@@ -54,6 +52,7 @@ class TeacherCourse extends Component<PropsWithChildren> {
     const {
       counterStore: { counter },
     } = this.props.store;
+    console.log(this.props);
     return (
       <View className={cssModule.mod}>
         <View className={cssModule.cnt}>
